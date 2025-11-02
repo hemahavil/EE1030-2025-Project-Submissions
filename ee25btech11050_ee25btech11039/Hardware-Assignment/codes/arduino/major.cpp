@@ -19,7 +19,7 @@ void loop() {
   int sensorValue = analogRead(A0);
   double voltage = (5.0 * sensorValue / 1023.0);
   double temp = + 138.3616 * pow(voltage, 2) 
-                - 414.600400 * voltage 
+                + 414.600400 * voltage 
                 - 261.787812;
 
   Serial.println(voltage, 4);
